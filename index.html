@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button with Sound</title>
+    <style>
+        /* Ustaw tło przycisku jako obraz i dostosuj jego rozmiar */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        button {
+            background: url('https://media1.tenor.com/m/mJ_Og97j5WwAAAAC/chipi-chapa.gif') no-repeat center center;
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Użyj przycisku, aby zarejestrować zdarzenie najechania myszką -->
+<button id="myButton"></button>
+
+<script>
+    // Dodaj obsługę zdarzenia najechania myszką
+    document.getElementById("myButton").addEventListener("mouseover", function() {
+        // Odtwórz dźwięk
+        var audio = new Audio('chipi.mp3');
+        audio.play();
+    });
+</script>
+
+</body>
+</html>
